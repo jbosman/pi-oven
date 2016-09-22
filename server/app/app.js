@@ -2,6 +2,8 @@ var express = require('express')
 var bodyParser = require('body-parser')
 var morgan = require('morgan')
 
+var db = require('../db/_db')
+
 var app = express()
 
 // parse application/x-www-form-urlencoded
@@ -24,6 +26,8 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500).send(err.message || 'Internal server error.');
 })
 
-app.listen(3000, function(){
-	console.log('The pies are baking on port 3000!')
-})
+var startServer = () => app.listen( 3000, () => console.log('The pies are baking on port 3000!'))
+
+db.sync()
+.then(startServer)
+.catch(console.err)
