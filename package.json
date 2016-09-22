@@ -1,0 +1,12 @@
+{
+  "name": "pi-oven",
+  "version": "1.0.0",
+  "description": "Main application for serving up raspberry pi modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Joey Bosman",
+  "license": "ISC"
+}
