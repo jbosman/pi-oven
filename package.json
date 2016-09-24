@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server/app/app.js"
+    "start": "nodemon ./server/app/app.js",
+    "seed": "node _seeding/seed.js"
   },
   "author": "Joey Bosman",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "path": "^0.12.7",

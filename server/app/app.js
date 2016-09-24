@@ -1,22 +1,16 @@
 var express = require('express')
-var bodyParser = require('body-parser')
-var morgan = require('morgan')
 
 var db = require('../db/_db')
 
 var app = express()
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-// parse application/json
-app.use(bodyParser.json())
-// Provide route debugging
-app.use(morgan('dev'))
+// Configures some path variables
+require('./configure')(app);
 
-app.use('/api', require('./routes'));
+app.use('/api', require('./routes'))
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
+app.get('/*', function (req, res) {
+  res.sendFile()
 })
 
 // Error catching endware.

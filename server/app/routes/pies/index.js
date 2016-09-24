@@ -1,8 +1,16 @@
 var pies = require('express').Router()
+var Pie = require('../../../db/models/pie')
+
 module.exports = pies;
 
 pies.get('/', function(req,res,next){
-	res.send("Welcome to pies")
+
+	Pie.findAll()
+	.then(function(allPies){
+		res.status(200).send(allPies)
+	})
+	.catch(next)
+
 })
 
 pies.get('/:id', function(require){

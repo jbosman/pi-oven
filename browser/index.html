@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Raspberry Pi Oven</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CUTSOM CSS -->
+    <link rel="stylesheet" type="text/css" href='/public/css/main.css'>
+    <!-- ANGULAR -->
+    <script src="/angular/angular.js"></script>
+    <!-- <script src="/angular-ui-router/release/angular-ui-router.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/navbar/navbar.directive.js"></script>
+    <script src="js/body-tabs/body.tabs.directive.js"></script>
+    <script src="js/pi/pi.directive.js"></script>
+    <script src="js/pi/pi.header.directive.js"></script>
+    <script src="js/pi/all.pies.directive.js"></script>
+    <script src="js/pi/pi.factory.js"></script>
+  </head>
+
+   <body ng-app="pioven">
+   		<navbar></navbar>
+      <img style='margin-bottom: 25px' class="center-block" src="public/images/Pi_Pie.jpg">
+      <body-tabs></body-tabs>
+   </body>
+
+</html>
