@@ -1,6 +1,6 @@
 app.directive('piHeader', function(){
 	return {
 		restrict: 'E',
-		templateUrl: '/js/pi/pi.header.html'
+		templateUrl: '/js/pi/piHeader/pi.header.html'
 	}
 })

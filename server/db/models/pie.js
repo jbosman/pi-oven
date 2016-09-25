@@ -17,9 +17,9 @@ module.exports = db.define('pie', {
 		allowNull: false
 	}
 }, {
-	instanceMethod: {
+	getterMethods: {
 		getUrl: function() {
-			return "https://" + ipAddress + ":" + port;
+			return "http://" + this.ipAddress + ":" + this.port;
 		}
 	}
 })

@@ -2,6 +2,7 @@
 <html lang="en">
 
   <head>
+    <base href="/" />
     <title>Raspberry Pi Oven</title>
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,20 +11,23 @@
     <!-- CUTSOM CSS -->
     <link rel="stylesheet" type="text/css" href='/public/css/main.css'>
     <!-- ANGULAR -->
+    <script src="/angular/angular.js"></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <script src="angular/angular.js" defer></script>
-    <sricpt src="angular-ui-router/release/angular-ui-router.js" defer></sricpt>
+    <script src="js/app.js"></script>
+    
+    <script src="js/navbar/navbar.directive.js"></script>
+    <script src="js/body-tabs/body.tabs.directive.js"></script>
 
-    <script src="js/app.js" defer></script>
-    <script src="js/navbar/navbar.directive.js" defer></script>
-    <script src="js/body-tabs/body.tabs.directive.js" defer></script>
-
-    <script src="js/pi/pi.directive.js" defer></script>
-    <script src="js/pi/pi.header.directive.js" defer></script>
-    <script src="js/pi/all.pies.directive.js" defer></script>
-    <script src="js/pi/pi.factory.js" defer></script>
-    <script src="js/pi/pi.view.factory.js" defer></script>
-    <script src="js/pi/pi.view.states.js" defer></script>
+    <!-- SINGLE PI -->
+    <script src="js/pi/piHeader/pi.header.directive.js"></script>
+    <script src="js/pi/singlePi/pi.directive.js"></script>
+    <script src="js/pi/singlePi/pi.factory.js"></script>
+    <!-- ALL PIES -->
+    <script src="js/pi/allPies/all.pies.directive.js"></script>
+    <!-- PI View -->
+    <script src="js/pi/piView/pi.view.states.js"></script>
+    <script src="js/pi/piView/pi.view.controller.js"></script>
   </head>
 
    <body ng-app="pioven">
