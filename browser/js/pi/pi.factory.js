@@ -1,12 +1,12 @@
-app.factory('piFactory', function($http){
+app.factory('piFactory', function($http, $log){
 	var services = {}
 
 		services.fetchAll = function(){
 			return $http.get('/api/pies')
 						.then(function(response){
-							console.log("Factory: ", response.data)
 							return response.data;
 						})
+						.catch($log)
 		}
 
 	return services

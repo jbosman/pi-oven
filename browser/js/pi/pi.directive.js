@@ -4,6 +4,11 @@ app.directive('pi', function(){
 		templateUrl: 'js/pi/pi.html',
 		scope: {
 			pie: '='
+		},
+		controller: function($scope, piViewFactory){
+			$scope.setConnected = function(){
+				piViewFactory.setConnected($scope.pie)
+			}
 		}
 	}
 })

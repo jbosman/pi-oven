@@ -7,6 +7,7 @@
             <!-- TABS NAVIGATION BAR -->
              <ul class="nav nav-tabs" role="tablist">
                <li role="presentation" class="active"><a href="#current" aria-controls="current" role="tab" data-toggle="tab">Fresh Pi's</a></li>
+               <li role="presentation"><a href="#connectedPi" aria-controls="connectedPi" role="tab" data-toggle="tab">Connected Pi</a></li>
                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Pi Settings</a></li>
              </ul>
 
@@ -19,7 +20,15 @@
                     <all-pies></all-pies>
                  </div>
 
-                <!-- CONFIG VIEW -->
+                 <!-- PI View VIEW -->
+                 <div role="tabpanel" class="tab-pane" id="connectedPi">
+                  <iframe class="center-block width="1000" src={{url}}></iframe>
+                  <!-- <iframe class="center-block width="1000" ng-src=http://192.168.6.64:4000/></iframe> -->
+                  <!-- http://192.168.6.64:4000/ -->
+                  <!-- style="border:none" -->
+                 </div>
+
+                <!-- SETTINGS VIEW -->
                  <div role="tabpanel" class="tab-pane" id="settings">
                   
                  </div>

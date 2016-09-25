@@ -10,7 +10,7 @@ require('./configure')(app);
 app.use('/api', require('./routes'))
 
 app.get('/*', function (req, res) {
-  res.sendFile()
+  //res.sendFile()
 })
 
 // Error catching endware.
