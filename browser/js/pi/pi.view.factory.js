@@ -2,7 +2,7 @@ app.factory('piViewFactory', function($sce){
 
 	var services = {}
 
-	var currentPieUrl = "badURL";
+	var currentPieUrl = "localhost:4000/";
 
 	services.getConnentedPieUrl = function() {
 		console.log("returning: ", currentPieUrl)

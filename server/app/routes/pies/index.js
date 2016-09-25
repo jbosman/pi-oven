@@ -13,8 +13,12 @@ pies.get('/', function(req,res,next){
 
 })
 
-pies.get('/:id', function(require){
-
+pies.get('/:id', function(req,res,next){
+	Pie.findById(req.params.id)
+	.then(function(pi){
+		res.status(200).send(pi)
+	})
+	.catch(next)
 })
 
 pies.post('/:id', function(req,res,next){

@@ -16,5 +16,11 @@ module.exports = db.define('pie', {
 		type: Sequelize.STRING,
 		allowNull: false
 	}
+}, {
+	instanceMethod: {
+		getUrl: function() {
+			return "https://" + ipAddress + ":" + port;
+		}
+	}
 })
 
